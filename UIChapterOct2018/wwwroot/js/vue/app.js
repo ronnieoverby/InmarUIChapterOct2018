@@ -24,5 +24,15 @@ const app = new Vue({
                     }
                 });
         }
+    },
+    mounted() {
+        if (localStorage.results) {
+            this.results = JSON.parse(localStorage.results);
+        }
+    },
+    watch: {
+        results(newResults) {
+            localStorage.results = JSON.stringify(newResults);
+        }
     }
 });
