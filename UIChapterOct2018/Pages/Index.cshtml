@@ -10,9 +10,12 @@
 
     <form class="form-inline">
         <label class="sr-only" for="ndc">NDC</label>
-        <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC">
+        <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
+               v-model="search.ndc">
         <button class="btn btn-primary mb-2">Search</button>
     </form>
+
+    {{search.ndc}}
 
     <hr />
 
