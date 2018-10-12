@@ -1,0 +1,92 @@
+jquery
+
+	Used for:
+		DOM Traversal and Manipulation
+		Event Handling
+		Ajax
+
+	jQuery made it easy to:
+		Animate
+		Avoid page reloads
+		Find plugins and widgits
+
+	Current version 3.3.1 (2.x / 1.x no longer patched)
+
+	Popular things that depend on jQuery:
+		https://datatables.net/
+		Twitter bootstrap
+
+------
+
+VueJs
+
+	"Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable." --- https://vuejs.org/v2/guide/
+
+	https://vuejs.org says:
+
+	Approachable
+		"Already know HTML, CSS and JavaScript? Read the guide and start building things in no time!"
+	Versatile
+		"An incrementally adoptable ecosystem that scales between a library and a full-featured framework."
+	Performant
+		"20KB min+gzip Runtime - Blazing Fast Virtual DOM - Minimal Optimization Efforts"
+
+
+----
+
+I don't enjoy "front-end" development as much as other types of programming / as much as I used to.
+
+If there is a JS UI framework out there, chances are I've invested anywhere from a week to a year evaluating it/using it.
+	jQuery, knockout, angularjs, react, durandal, aurelia, angular2+, ember, backbone, riot, mithril
+
+I value...
+
+	easy ramp up
+	quality ecosystem
+		- docs
+		- libs
+		- people
+	predictable/reliable behavior of the fx/lib itself
+	consistent api	
+	fun to program (creators have empathy for developers)
+	performance
+	ability to integrate with other-libraries!!!!!!!
+
+NOTHING has satisfied me in these areas as Vue has.
+
+
+-----------
+
+Emphasis
+	"incrementally adoptable"
+		plop vue.js into page
+		write vue app. done.
+		no build pipeline		
+		no grulp/webpackify
+		just like circa 2008 naive jQuery goodness. but better.
+		BUT! if you want the "robustness" of modern frontend development
+			- https://vuejs.org/  --> ecosystem  --->>> ....
+				- https://vue-loader.vuejs.org/
+				- https://cli.vuejs.org/
+				- official curated list of 3rd party efforts
+				- others
+
+	EASY to ramp up
+		show stuff on learn menu @ vuejs.org
+
+
+jQuery Plugins + Vue
+	Wrap or Port
+	Vue is in charge of part of the DOM
+
+Links:
+	https://vuejs.org/v2/guide/comparison.html
+	https://vuejs.org/
+	https://dzone.com/articles/top-javascript-libraries-for-making-ajax-calls
+	https://blog.hellocomet.co/why-i-chose-to-replace-jquery-with-vuejs/
+	https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/
+	https://bootstrap-vue.js.org/
+	https://curated.vuejs.org/
+	https://github.com/vuejs/awesome-vue
+	https://github.com/vuejs
+	https://vuejs.org/v2/guide/typescript.html
