@@ -44,19 +44,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="result in results">
-                    <td>{{result.details.nationalDrugCode}}</td>
-                    <td>{{result.details.description}}</td>
-                    <td>{{result.details.organization.name}}</td>
-                    <td>{{result.details.fullPrice}}</td>
-                    <td>{{result.details.doesMfgAcceptReturns}}</td>
-                    <td>{{result.details.isHazardousWaste}}</td>
-                    <td>{{result.status}}</td>
-                </tr>
+                    <tr v-for="result in results" v-bind:class="{ 'table-danger': result.details.isHazardousWaste }">
+                        <td>{{result.details.nationalDrugCode}}</td>
+                        <td>{{result.details.description}}</td>
+                        <td>{{result.details.organization.name}}</td>
+                        <td>{{result.details.fullPrice}}</td>
+                        <td>{{result.details.doesMfgAcceptReturns}}</td>
+                        <td>{{result.details.isHazardousWaste}}</td>
+                        <td>{{result.status}}</td>
+                    </tr>
             </tbody>
         </table>
     </transition>
 </div>
 
-<script src="~/lib/vue/vue.min.js"></script>
+<script src="~/lib/vue/vue.js"></script>
 <script src="~/js/vue/app.js"></script>
