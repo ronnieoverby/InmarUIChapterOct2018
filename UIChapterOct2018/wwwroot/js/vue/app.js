@@ -23,6 +23,9 @@ const app = new Vue({
                         this.error = `${this.ndc} was not found...`;
                     }
                 });
+        },
+        clearError() {
+            this.error = null;
         }
     }
 });
