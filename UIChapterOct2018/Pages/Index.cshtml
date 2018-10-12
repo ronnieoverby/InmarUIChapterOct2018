@@ -8,6 +8,10 @@
 
 <div id="app">
 
+    <div class="alert alert-danger" role="alert" v-if="error">
+        {{error}}
+    </div>
+
     <div class="form-inline">
         <label class="sr-only" for="ndc">NDC</label>
         <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
