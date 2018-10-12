@@ -5,6 +5,14 @@
     }
 }
 
+Vue.component('check-mark', {
+    props: ['condition'],
+    data: function () {
+        return {}; // no data in this component
+    },
+    template: '<span v-show="condition" class="h4">✓</span>'
+});
+
 const app = new Vue({
     el: '#app',
     data: {

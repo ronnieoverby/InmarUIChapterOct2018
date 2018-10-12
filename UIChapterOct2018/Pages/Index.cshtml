@@ -50,10 +50,10 @@
                     <td>{{result.details.organization.name}}</td>
                     <td>{{result.details.fullPrice}}</td>
                     <td class="text-center">
-                        <span v-show="result.details.doesMfgAcceptReturns" class="h4">✓</span>
+                        <check-mark v-bind:condition="result.details.doesMfgAcceptReturns"></check-mark>
                     </td>
                     <td class="text-center">
-                        <span v-show="result.details.isHazardousWaste" class="h4">✓</span>
+                        <check-mark v-bind:condition="result.details.isHazardousWaste"></check-mark>
                     </td>
                     <td>{{result.status}}</td>
                 </tr>
