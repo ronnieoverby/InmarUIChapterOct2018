@@ -38,21 +38,25 @@
                     <th>Description</th>
                     <th>Manufacturer</th>
                     <th>Full Price</th>
-                    <th>Mfg Accept Returns?</th>
-                    <th>Is Hazardous Waste?</th>
+                    <th class="text-center">Mfg Accept Returns?</th>
+                    <th class="text-center">Is Hazardous Waste?</th>
                     <th>Inmar Status</th>
                 </tr>
             </thead>
             <tbody>
-                    <tr v-for="result in results" v-bind:class="{ 'table-danger': result.details.isHazardousWaste }">
-                        <td>{{result.details.nationalDrugCode}}</td>
-                        <td>{{result.details.description}}</td>
-                        <td>{{result.details.organization.name}}</td>
-                        <td>{{result.details.fullPrice}}</td>
-                        <td>{{result.details.doesMfgAcceptReturns}}</td>
-                        <td>{{result.details.isHazardousWaste}}</td>
-                        <td>{{result.status}}</td>
-                    </tr>
+                <tr v-for="result in results" v-bind:class="{ 'table-danger': result.details.isHazardousWaste }">
+                    <td>{{result.details.nationalDrugCode}}</td>
+                    <td>{{result.details.description}}</td>
+                    <td>{{result.details.organization.name}}</td>
+                    <td>{{result.details.fullPrice}}</td>
+                    <td class="text-center">
+                        <span v-show="result.details.doesMfgAcceptReturns" class="h4">✓</span>
+                    </td>
+                    <td class="text-center">
+                        <span v-show="result.details.isHazardousWaste" class="h4">✓</span>
+                    </td>
+                    <td>{{result.status}}</td>
+                </tr>
             </tbody>
         </table>
     </transition>
