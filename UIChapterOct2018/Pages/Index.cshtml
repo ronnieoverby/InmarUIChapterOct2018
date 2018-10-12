@@ -14,16 +14,17 @@
         </div>
     </transition>   
 
-    <div class="form-inline">
+    <form class="form-inline" v-on:submit.prevent="search">
         <label class="sr-only" for="ndc">NDC</label>
         <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
-               v-on:keyup="error = null"
+               required pattern="^\d+$"
+               v-on:change="error = null"
                v-model="ndc">
         <button class="btn btn-primary mb-2"
-                v-on:click="search">
+                type="submit">
             Search
         </button>
-    </div>
+    </form>
 
     <hr />
 
