@@ -31,6 +31,10 @@ const app = new Vue({
                         this.error = `${this.ndc} was not found...`;
                     }
                 });
+        },
+        clearResults() {
+            if(confirm('Really?'))
+                this.results = [];
         }
     },
     mounted() {

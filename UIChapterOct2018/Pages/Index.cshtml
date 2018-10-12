@@ -58,6 +58,13 @@
                     <td>{{result.status}}</td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7" class="text-right">
+                        <button class="btn btn-danger" v-on:click="clearResults()">Clear</button>
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </transition>
 </div>
