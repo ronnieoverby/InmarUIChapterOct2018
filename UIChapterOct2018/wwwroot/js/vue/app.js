@@ -1,22 +1,27 @@
 ﻿class DrugSearchClient {
     static search(ndc) {
         return fetch(`http://localhost:59467/ndc/${ndc}`)
-            .then(r => r.json())
-            .then(j => console.log(j));
+            .then(r => r.json());            
     }
 }
 
 const app = new Vue({
     el: '#app',
     data: {
-        search: {
-            ndc: ''
-        },
-        results: []
+        ndc: null,
+        results: [],
+        error: null
     },
     methods: {
-        searchDrugs() {
-            alert('user is searching for ' + this.search.ndc);
+        search() {
+            DrugSearchClient.search(this.ndc)
+                .then(response => {
+                    if (response.found) {
+                        this.results.push(response);
+                    } else {
+                        this.error = `${this.ndc} was not found...`;
+                    }
+                });
         }
     }
 });

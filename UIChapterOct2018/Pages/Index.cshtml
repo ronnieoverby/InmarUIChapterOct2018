@@ -11,14 +11,14 @@
     <div class="form-inline">
         <label class="sr-only" for="ndc">NDC</label>
         <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
-               v-model="search.ndc">
+               v-model="ndc">
         <button class="btn btn-primary mb-2"
-                v-on:click="searchDrugs">Search</button>
+                v-on:click="search">Search</button>
     </div>
 
     <hr />
 
-    <p>N Result(s)</p>
+    <p>{{results.length}} Result(s)</p>
 
     <table class="table table-borders">
         <thead>
