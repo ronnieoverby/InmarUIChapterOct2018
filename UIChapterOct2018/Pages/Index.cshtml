@@ -13,7 +13,9 @@
         <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
                v-model="ndc">
         <button class="btn btn-primary mb-2"
-                v-on:click="search">Search</button>
+                v-on:click="search">
+            Search
+        </button>
     </div>
 
     <hr />
@@ -23,6 +25,7 @@
     <table class="table table-borders">
         <thead>
             <tr>
+                <th>NDC</th>
                 <th>Description</th>
                 <th>Manufacturer</th>
                 <th>Full Price</th>
@@ -31,7 +34,17 @@
                 <th>Inmar Status</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <tr v-for="result in results">
+                <td>{{result.details.nationalDrugCode}}</td>
+                <td>{{result.details.description}}</td>
+                <td>{{result.details.organization.name}}</td>
+                <td>{{result.details.fullPrice}}</td>
+                <td>{{result.details.doesMfgAcceptReturns}}</td>
+                <td>{{result.details.isHazardousWaste}}</td>
+                <td>{{result.status}}</td>
+            </tr>
+        </tbody>
     </table>
 
 </div>

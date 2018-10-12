@@ -18,6 +18,7 @@ const app = new Vue({
                 .then(response => {
                     if (response.found) {
                         this.results.push(response);
+                        this.ndc = null;
                     } else {
                         this.error = `${this.ndc} was not found...`;
                     }
