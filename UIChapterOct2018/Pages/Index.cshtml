@@ -8,14 +8,16 @@
 
 <div id="app">
 
-    <div class="alert alert-danger" role="alert" v-if="error">
-        {{error}}
-    </div>
+    <transition name="fade">
+        <div class="alert alert-danger" role="alert" v-show="error" v-cloak>
+            {{error}}
+        </div>
+    </transition>   
 
     <div class="form-inline">
         <label class="sr-only" for="ndc">NDC</label>
         <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC"
-               v-on:keyup="clearError()"
+               v-on:keyup="error = null"
                v-model="ndc">
         <button class="btn btn-primary mb-2"
                 v-on:click="search">
