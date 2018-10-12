@@ -12,7 +12,7 @@
         <div class="alert alert-danger" role="alert" v-show="error" v-cloak>
             {{error}}
         </div>
-    </transition>   
+    </transition>
 
     <form class="form-inline" v-on:submit.prevent="search">
         <label class="sr-only" for="ndc">NDC</label>
@@ -28,33 +28,34 @@
 
     <hr />
 
-    <p>{{results.length}} Result(s)</p>
+    <p v-cloak>{{results.length}} Result(s)</p>
 
-    <table class="table table-borders">
-        <thead>
-            <tr>
-                <th>NDC</th>
-                <th>Description</th>
-                <th>Manufacturer</th>
-                <th>Full Price</th>
-                <th>Mfg Accept Returns?</th>
-                <th>Is Hazardous Waste?</th>
-                <th>Inmar Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="result in results">
-                <td>{{result.details.nationalDrugCode}}</td>
-                <td>{{result.details.description}}</td>
-                <td>{{result.details.organization.name}}</td>
-                <td>{{result.details.fullPrice}}</td>
-                <td>{{result.details.doesMfgAcceptReturns}}</td>
-                <td>{{result.details.isHazardousWaste}}</td>
-                <td>{{result.status}}</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <transition name="fade">
+        <table class="table table-bordered table-striped table-hover" v-show="results.length" v-cloak>
+            <thead class="thead-dark">
+                <tr>
+                    <th>NDC</th>
+                    <th>Description</th>
+                    <th>Manufacturer</th>
+                    <th>Full Price</th>
+                    <th>Mfg Accept Returns?</th>
+                    <th>Is Hazardous Waste?</th>
+                    <th>Inmar Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="result in results">
+                    <td>{{result.details.nationalDrugCode}}</td>
+                    <td>{{result.details.description}}</td>
+                    <td>{{result.details.organization.name}}</td>
+                    <td>{{result.details.fullPrice}}</td>
+                    <td>{{result.details.doesMfgAcceptReturns}}</td>
+                    <td>{{result.details.isHazardousWaste}}</td>
+                    <td>{{result.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </transition>
 </div>
 
 <script src="~/lib/vue/vue.min.js"></script>
