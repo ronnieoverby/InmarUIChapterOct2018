@@ -17,7 +17,7 @@ const app = new Vue({
             DrugSearchClient.search(this.ndc)
                 .then(response => {
                     if (response.found) {
-                        this.results.push(response);
+                        this.results.unshift(response);
                         this.ndc = null;
                     } else {
                         this.error = `${this.ndc} was not found...`;
