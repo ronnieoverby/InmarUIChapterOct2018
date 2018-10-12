@@ -4,14 +4,15 @@
     ViewData["Title"] = "Home page";
 }
 
-<h2>Drug Search</h2>
+<h1>Drug Search</h1>
 
 <div id="app">
 
-    <pre>{{message}}</pre>
-
-    @*<input type="search" placeholder="NDC" />
-    <button>Search</button>
+    <form class="form-inline">
+        <label class="sr-only" for="ndc">NDC</label>
+        <input type="search" class="form-control mb-2 mr-sm-2" id="ndc" placeholder="NDC">
+        <button class="btn btn-primary mb-2">Search</button>
+    </form>
 
     <hr />
 
@@ -29,7 +30,7 @@
             </tr>
         </thead>
         <tbody></tbody>
-    </table>*@
+    </table>
 
 </div>
 
