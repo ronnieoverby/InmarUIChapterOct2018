@@ -13,5 +13,10 @@ const app = new Vue({
             ndc: ''
         },
         results: []
+    },
+    methods: {
+        searchDrugs() {
+            alert('user is searching for ' + this.search.ndc);
+        }
     }
 });
